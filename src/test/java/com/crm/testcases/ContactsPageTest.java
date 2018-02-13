@@ -39,7 +39,7 @@ public class ContactsPageTest extends BaseClass {
 		testUtil.switchToFrame();
 	}
 	
-	@Test(priority=2)
+	@Test(priority=1)
 	public void createAndDeleteContact() {
 		
 		createEditContactPage = homePage.clickNewContact();
@@ -55,13 +55,15 @@ public class ContactsPageTest extends BaseClass {
 		
 	}
 	
+	
+	
 	@DataProvider
 	public Object[][] getCRMTestData() {
 		Object data[][] = TestUtil.getTestData("contacts");
 		return data;
 	}
 	
-	@Test(priority=1,dataProvider="getCRMTestData")
+	@Test(priority=2,dataProvider="getCRMTestData")
 	public void createContacts(String title, String firstName, String lastName, String company, String mobile, String recieveEmail) {
 		createEditContactPage = homePage.clickNewContact();
 		
